@@ -77,7 +77,6 @@ app.delete("/api/foods/:id", async(req, res) =>{
         }
         res.json(forafood);
         console.log("Comida deletada com sucesso");
-        console.log()
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: error.message });
