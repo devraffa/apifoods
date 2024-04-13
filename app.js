@@ -24,11 +24,11 @@ app.get("/api/foods", async (req, res) => {
 
 app.get("/api/foods/:id", async(req, res)=>{
     try{
-        const food = await Food.findById(req.params.id)
-        if (food == null) {
+        const pegafood = await Food.findById(req.params.id)
+        if (pegafood == null) {
             return res.status(404).json({ message: "A Comida não foi encontrada" });
         }
-        res.json(food);
+        res.json(pegafood);
     } 
     catch (err) {
         console.error(err);
